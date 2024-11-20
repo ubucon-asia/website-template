@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '@components/Navigation.astro';
+import MainBanner from '@components/MainBanner.astro';
+import FeaturedSpeakers from '@components/FeaturedSpeakers.astro';
+import { WebsiteConfig } from '../config';
+---
+
+<Layout title="Welcome to Astro.">
+	<Navigation/>
+	<MainBanner/>
+		<section class="p-section">
+			<div class="p-section--shallow">
+				<div class="row">
+					<hr class="p-rule">
+				</div>
+		  	<div class="row--50-50">
+				<div class="col">
+					<h2>Place for people with Ubuntu and FOSS in common</h2>
+					<p>UbuCon Asia brings together people with diverse backgrounds across Asia with one thing in common: Ubuntu and FOSS - 
+						to explore what we can do with Ubuntu and FOSS and how we can contribute to its projects and communities.
+						<br/><br/>Not sure if this event is for you? Watch our aftermovie from last year.</a>
+					</p>
+				</div>
+				<div class="col">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ul8DQh3yroo?si=RQT0Jqq8-bX4yU6-" 
+						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+		  		</div>
+			</div>
+		</section>
+	<FeaturedSpeakers/>
+  <div class="p-section">
+	<div class="row--50-50-on-large">
+	  <hr>
+	  <div class="col">
+		<div class="p-section--shallow">
+		  <div class="p-image-container--square is-cover u-hide--small u-hide--medium">
+			<img class="p-image-container__image" src={WebsiteConfig.cityBanner.cityImage} alt="Factory floor">
+		  </div>
+		  <div class="p-image-container--3-2-on-medium p-image-container--16-9-on-small is-cover u-hide--large">
+			<img class="p-image-container__image" src={WebsiteConfig.cityBanner.cityImage} alt="Factory floor">
+		  </div>
+		</div>
+	  </div>
+	  <div class="col">
+		<div class="p-section--shallow">
+		  <h2>Let's meet in the cultural capital of the Nepal!</h2>
+		</div>
+		<div class="p-section--shallow">
+		  <p>
+			Have you decided to join us for UbuCon Asia 2025 in Kathmandu, Nepal? Start planning your trip today! Find information from below for planning your travel. 
+		  </p>
+		</div>
+		<ul class="p-list--divided">
+  
+			<li class="p-list__item is-ticked">Visas and other travel requirements</li>
+		  <li class="p-list__item is-ticked">Getting to the city</li>
+		  <li class="p-list__item is-ticked">Find nearby accommodations</li>
+		  <li class="p-list__item is-ticked">Venue & Safety information</li>
+		  <li class="p-list__item is-ticked">Exploring the city</li>
+  
+		 
+  
+		</ul>
+		<div class="p-cta-block"><a href="#" class="p-button">Learn more</a>
+		  <a href="#">Contact us ›</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+</Layout>
+
