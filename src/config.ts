@@ -1,5 +1,7 @@
 import UCALogo from './assets/logo.svg'
 import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
+import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
+import OSCollectiveLogo from "@assets/oscollective.webp";
 
 export const WebsiteConfig = {
     siteTitle: "UbuCon Asia 2025",
@@ -25,6 +27,15 @@ export const WebsiteConfig = {
             ]
         }
     ],
+    footer: {
+        copyright: "© 2024-Present UbuCon Asia Committee. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
+        contactUs: "mailto:contact@ubucon.asia",
+        srcRepoUrl: "https://github.com/ubucon-asia/2025.ubucon.asia",
+        organizers: [
+            { name: "UbuCon Asia Committee", logoImage: UbuConAsiaCommitteeLogo.src, link: "https://www.ubucon.asia" },
+            { name: "Open Source Collective", logoImage: OSCollectiveLogo.src, link: "https://www.oscollective.org/" }
+        ]
+    },
     mainBanner: {
         dates: "Mid of September*",
         venue: "St. Xavier’s College, Kathmandu, Nepal*",
