@@ -10,19 +10,18 @@ export const WebsiteConfig = {
             link:"#",
             childs: [
                 {
-                    label: "About",
+                    label: "About the event",
                     link:"#",
                 }
             ]
-        },
+        }
+    ],
+    subNavigation: [
         {
-            label: "About 2",
+            label: "🎟️",
             link:"#",
             childs: [
-                {
-                    label: "About",
-                    link:"#",
-                }
+                
             ]
         }
     ],
