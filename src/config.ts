@@ -18,6 +18,16 @@ export const WebsiteConfig = {
             ]
         },
         {
+            label: "Venue & Travel",
+            link:"#",
+            childs: [
+                {
+                    label: "Venue & Safety",
+                    link:"/venue-and-travel/venue-and-safety",
+                }
+            ]
+        },
+        {
             label: "Programs",
             link: "#",
             childs: [
