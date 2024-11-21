@@ -18,6 +18,30 @@ export const WebsiteConfig = {
             ]
         },
         {
+            label: "Programs",
+            link: "#",
+            childs: [
+                {
+                    label: "Timetable",
+                    link: "https://events.canonical.com/event/125/timetable/"
+                }
+            ]
+        },
+        {
+            label: "Sponsors/Patrons",
+            link: "#",
+            childs: [
+                {
+                    label: "Become a sponsor",
+                    link: "/sponsors/become-a-sponsor/"
+                },
+                {
+                    label: "Our sponsors",
+                    link: "/sponsors/our-sponsors/"
+                }
+            ]
+        },
+        {
             label: "Links",
             link:"#",
             childs: [
