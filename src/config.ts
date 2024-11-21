@@ -16,6 +16,24 @@ export const WebsiteConfig = {
                     link:"#",
                 }
             ]
+        },
+        {
+            label: "Links",
+            link:"#",
+            childs: [
+                {
+                    label: "News",
+                    link:"https://blog.ubucon.asia/",
+                },
+                {
+                    label: "Docs",
+                    link:"https://docs.ubucon.asia",
+                },
+                {
+                    label: "Chat",
+                    link:"https://docs.ubucon.asia/chat",
+                }
+            ]
         }
     ],
     subNavigation: [
@@ -46,7 +64,7 @@ export const WebsiteConfig = {
         buttons: [
             {
                 label: "Become a sponsor!",
-                link: "mailto:sponsorship@ubucon.asia",
+                link: "/sponsors/become-a-sponsor",
                 class: "p-button--positive"
             }
         ],
