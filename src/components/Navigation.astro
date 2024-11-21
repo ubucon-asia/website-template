@@ -81,12 +81,12 @@ import { WebsiteConfig } from "../config";
 </header>
 
 <script>
-    function toggleDropdown(toggle, open) {
-        var parentElement = toggle.parentNode;
+    function toggleDropdown(toggle: HTMLElement, open: boolean) {
+        var parentElement = toggle.parentNode as HTMLElement;
         var dropdown = document.getElementById(
-            toggle.getAttribute("aria-controls"),
+            toggle.getAttribute("aria-controls") ?? "",
         );
-        dropdown.setAttribute("aria-hidden", !open);
+        dropdown?.setAttribute("aria-hidden", (!open).toString());
 
         if (open) {
             parentElement.classList.add("is-active");
@@ -95,17 +95,17 @@ import { WebsiteConfig } from "../config";
         }
     }
 
-    function closeAllDropdowns(toggles) {
+    function closeAllDropdowns(toggles: HTMLElement[]) {
         toggles.forEach(function (toggle) {
             toggleDropdown(toggle, false);
         });
     }
 
-    function handleClickOutside(toggles, containerClass) {
+    function handleClickOutside(toggles: HTMLElement[], containerClass: string) {
         document.addEventListener("click", function (event) {
-            var target = event.target;
+            var target = event.target as Element;
 
-            if (target.closest) {
+            if (target?.closest) {
                 if (!target.closest(containerClass)) {
                     closeAllDropdowns(toggles);
                 }
@@ -113,19 +113,18 @@ import { WebsiteConfig } from "../config";
         });
     }
 
-    function initNavDropdowns(containerClass) {
+    function initNavDropdowns(containerClass: string) {
         var toggles = [].slice.call(
             document.querySelectorAll(containerClass + " [aria-controls]"),
         );
 
         handleClickOutside(toggles, containerClass);
 
-        toggles.forEach(function (toggle) {
+        toggles.forEach(function (toggle: HTMLElement) {
             toggle.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                const shouldOpen =
-                    !toggle.parentNode.classList.contains("is-active");
+                const shouldOpen = !(toggle?.parentNode as HTMLElement)?.classList.contains("is-active");
                 closeAllDropdowns(toggles);
                 toggleDropdown(toggle, shouldOpen);
             });
