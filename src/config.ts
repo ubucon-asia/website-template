@@ -3,27 +3,32 @@ import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
 import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
 import OSCollectiveLogo from "@assets/oscollective.webp";
 
+interface SubMenuItem {
+    link: string;
+    label: string;
+}
+
 export const WebsiteConfig = {
     siteTitle: "UbuCon Asia 2025",
     siteDescription: "Kathmandu, Nepal | Mid of September",
     navigation: [
         {
             label: "About",
-            link:"#",
+            link: "#",
             childs: [
                 {
                     label: "About the event",
-                    link:"/about",
+                    link: "/about",
                 }
             ]
         },
         {
             label: "Venue & Travel",
-            link:"#",
+            link: "#",
             childs: [
                 {
                     label: "Venue & Safety",
-                    link:"/venue-and-travel/venue-and-safety",
+                    link: "/venue-and-travel/venue-and-safety",
                 }
             ]
         },
@@ -53,19 +58,19 @@ export const WebsiteConfig = {
         },
         {
             label: "Links",
-            link:"#",
+            link: "#",
             childs: [
                 {
                     label: "News",
-                    link:"https://blog.ubucon.asia/",
+                    link: "https://blog.ubucon.asia/",
                 },
                 {
                     label: "Docs",
-                    link:"https://docs.ubucon.asia",
+                    link: "https://docs.ubucon.asia",
                 },
                 {
                     label: "Chat",
-                    link:"https://docs.ubucon.asia/chat",
+                    link: "https://docs.ubucon.asia/chat",
                 }
             ]
         }
@@ -73,9 +78,9 @@ export const WebsiteConfig = {
     subNavigation: [
         {
             label: "🎟️",
-            link:"#",
+            link: "#",
             childs: [
-                
+
             ]
         }
     ],
@@ -107,7 +112,7 @@ export const WebsiteConfig = {
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/47.json?detail=contributions&occ=yes&pretty=yes",
         contributionIds: [20, 46, 43, 34, 19],
-        speakerIds: [{ db_id: 522, user: 107 }, { db_id: 517, user: 166 }, { db_id: 494, user: 615 }, { db_id: 515, user: 628 }, { db_id: 516, user: 271 }, { db_id: 487, user: 3}],
+        speakerIds: [{ db_id: 522, user: 107 }, { db_id: 517, user: 166 }, { db_id: 494, user: 615 }, { db_id: 515, user: 628 }, { db_id: 516, user: 271 }, { db_id: 487, user: 3 }],
         fullSchedulesUrl: "https://events.canonical.com/event/47/contributions/"
     },
     cityBanner: {
