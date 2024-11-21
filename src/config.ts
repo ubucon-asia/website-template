@@ -13,7 +13,7 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: "About the event",
-                    link:"#",
+                    link:"/about",
                 }
             ]
         },
