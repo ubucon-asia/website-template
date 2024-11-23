@@ -11,6 +11,7 @@ export interface SubMenuItem {
 export const WebsiteConfig = {
     siteTitle: "UbuCon Asia 2025",
     siteDescription: "Kathmandu, Nepal | Mid of September",
+    faviconPath: UCALogo.src,
     navigation: [
         {
             label: "About",
