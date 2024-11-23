@@ -38,6 +38,10 @@ export const WebsiteConfig = {
                 {
                     label: "Exploring the city",
                     link: "/venue-and-travel/explore-city",
+                },
+                {
+                    label: "Travel grant",
+                    link: "/venue-and-travel/travel-grant",
                 }
             ]
         },
