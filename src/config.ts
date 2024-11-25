@@ -51,6 +51,10 @@ export const WebsiteConfig = {
                 {
                     label: "Timetable",
                     link: "https://events.canonical.com/event/125/timetable/"
+                },
+                {
+                    label: "Social events",
+                    link: "/programs/social-events/"
                 }
             ]
         },
