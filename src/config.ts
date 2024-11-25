@@ -15,13 +15,8 @@ export const WebsiteConfig = {
     navigation: [
         {
             label: "About",
-            link: "#",
-            childs: [
-                {
-                    label: "About the event",
-                    link: "/about",
-                }
-            ]
+            link: "/about",
+            childs: []
         },
         {
             label: "Venue & Travel",
