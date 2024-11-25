@@ -10,7 +10,7 @@ export interface SubMenuItem {
 
 export const WebsiteConfig = {
     siteTitle: "UbuCon Asia 2025",
-    siteDescription: "Kathmandu, Nepal | Mid of September",
+    siteDescription: "Kathmandu, Nepal | August 30-31",
     faviconPath: UCALogo.src,
     navigation: [
         {
@@ -106,7 +106,7 @@ export const WebsiteConfig = {
         ]
     },
     mainBanner: {
-        dates: "Mid of September*",
+        dates: "August 30-31*",
         venue: "St. Xavier’s College, Kathmandu, Nepal*",
         description: "UbuCon Asia is a community-organized conference connecting Ubuntu community in Asia. \
             Join us in Kathmandu for two days memorable of conference that connects \
