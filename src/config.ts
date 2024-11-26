@@ -69,6 +69,10 @@ export const WebsiteConfig = {
                 {
                     label: "Our sponsors",
                     link: "/sponsors/our-sponsors/"
+                },
+                {
+                    label: "Patrons",
+                    link: "/sponsors/patrons/"
                 }
             ]
         },
