@@ -31,6 +31,10 @@ export const WebsiteConfig = {
                     link: "/venue-and-travel/visas-and-other-travel-requirements",
                 },
                 {
+                    label: "Accommodations",
+                    link: "/venue-and-travel/accommodations",
+                },
+                {
                     label: "Getting to the city",
                     link: "/venue-and-travel/getting-to-the-city",
                 },
