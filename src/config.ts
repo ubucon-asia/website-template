@@ -118,7 +118,6 @@ export const WebsiteConfig = {
         ]
     },
     mainBanner: {
-        dates: "August 30-31*",
         venue: "St. Xavier’s College, Kathmandu, Nepal*",
         description: "UbuCon Asia is a community-organized conference connecting Ubuntu community in Asia. \
             Join us in Kathmandu for two days memorable of conference that connects \
