@@ -1,74 +1,13 @@
 ---
-import Shell from '../layouts/Shell.astro';
-import MainBanner from '@components/MainBanner.astro';
-import FeaturedSpeakers from '@components/FeaturedSpeakers.astro';
-import Sponsors from '@components/Sponsors.astro';
-import BlogFeed from '@components/BlogFeed.astro';
-import { WebsiteConfig } from '../config';
+import { getRelativeLocaleUrlList } from 'astro:i18n';
+
+export function getStaticPaths() {
+	return getRelativeLocaleUrlList().map((locale) => {
+		let localeItem = locale.split('/')[1];
+		return {
+			params: { locale: localeItem },
+		};
+	});
+}
+
 ---
-
-<Shell title="Home">
-	<MainBanner/>
-		<section class="p-section">
-			<div class="p-section--shallow">
-				<div class="row">
-					<hr class="p-rule">
-				</div>
-		  	<div class="row--50-50">
-				<div class="col">
-					<h2>An event for people with Ubuntu and FOSS in common</h2>
-					<p>UbuCon Asia brings together people with diverse backgrounds across Asia with one thing in common: Ubuntu and FOSS - 
-						to explore what we can do with Ubuntu and FOSS and how we can contribute to its projects and communities.
-						<br/><br/>Not sure if this event is for you? Watch our aftermovie from last year.</a>
-					</p>
-				</div>
-				<div class="col">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ul8DQh3yroo?si=RQT0Jqq8-bX4yU6-" 
-						title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-		  		</div>
-			</div>
-		</section>
-	<FeaturedSpeakers/>
-	<div class="p-section">
-		<div class="row--50-50-on-large">
-		<hr>
-		<div class="col">
-			<div class="p-section--shallow">
-			<div class="p-image-container--square is-cover u-hide--small u-hide--medium">
-				<img class="p-image-container__image" src={WebsiteConfig.cityBanner.cityImage} alt="Factory floor">
-			</div>
-			<div class="p-image-container--3-2-on-medium p-image-container--16-9-on-small is-cover u-hide--large">
-				<img class="p-image-container__image" src={WebsiteConfig.cityBanner.cityImage} alt="Factory floor">
-			</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="p-section--shallow">
-			<h2>Let's meet in the cultural capital of the Nepal!</h2>
-			</div>
-			<div class="p-section--shallow">
-			<p>
-				Have you decided to join us for UbuCon Asia 2025 in Kathmandu, Nepal? Start planning your trip today! 
-				Find helpful information below for preparing your travel. 
-			</p>
-			</div>
-			<ul class="p-list--divided">
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/visas-and-other-travel-requirements">Visas and other travel requirements</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/getting-to-the-city">Getting to the city</a></li>
-				<li class="p-list__item is-ticked">Find nearby accommodations</li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/venue-and-safety">Venue & Safety information</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/explore-city">Exploring the city</a></li>
-			</ul>
-			<div class="p-cta-block">
-				<a href="https://matrix.to/#/#ubucon-asia-travel:ubuntu.com" class="p-button">Plan trip with other attendees</a>
-			<a href="mailto:travel@ubucon.asia">Contact travel support team for help ›</a>
-			</div>
-		</div>
-		</div>
-	</div>
-	<BlogFeed/>
-	<Sponsors/>
-</Shell>
-

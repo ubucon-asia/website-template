@@ -1,3 +1,6 @@
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { languageTag } from "./paraglide/runtime";
+
 import UCALogo from './assets/logo.svg'
 import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
 import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
@@ -12,10 +15,10 @@ export const WebsiteConfig = {
     siteTitle: "UbuCon Asia 2025",
     siteDescription: "Kathmandu, Nepal | August 30-31",
     faviconPath: UCALogo.src,
-    navigation: [
+    navigation: (locale: string) => [
         {
             label: "About",
-            link: "/about",
+            link: `/${locale}/about`,
             childs: []
         },
         {
@@ -24,27 +27,27 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: "Venue & Safety",
-                    link: "/venue-and-travel/venue-and-safety",
+                    link: `/${locale}/venue-and-travel/venue-and-safety`,
                 },
                 {
                     label: "Visas and other travel requirements",
-                    link: "/venue-and-travel/visas-and-other-travel-requirements",
+                    link: `/${locale}/venue-and-travel/visas-and-other-travel-requirements`,
                 },
                 {
                     label: "Accommodations",
-                    link: "/venue-and-travel/accommodations",
+                    link: `/${locale}/venue-and-travel/accommodations`,
                 },
                 {
                     label: "Getting to the city",
-                    link: "/venue-and-travel/getting-to-the-city",
+                    link: `/${locale}/venue-and-travel/getting-to-the-city`,
                 },
                 {
                     label: "Exploring the city",
-                    link: "/venue-and-travel/explore-city",
+                    link: `/${locale}/venue-and-travel/explore-city`,
                 },
                 {
                     label: "Travel grant",
-                    link: "/venue-and-travel/travel-grant",
+                    link: `/${locale}/venue-and-travel/travel-grant`,
                 }
             ]
         },
@@ -58,7 +61,7 @@ export const WebsiteConfig = {
                 },
                 {
                     label: "Social events",
-                    link: "/programs/social-events/"
+                    link: `/${locale}/programs/social-events/`
                 }
             ]
         },
@@ -68,15 +71,15 @@ export const WebsiteConfig = {
             childs: [
                 {
                     label: "Become a sponsor",
-                    link: "/sponsors/become-a-sponsor/"
+                    link: `/${locale}/sponsors/become-a-sponsor/`
                 },
                 {
                     label: "Our sponsors",
-                    link: "/sponsors/our-sponsors/"
+                    link: `/${locale}/sponsors/our-sponsors/`
                 },
                 {
                     label: "Patrons",
-                    link: "/sponsors/patrons/"
+                    link: `/${locale}/sponsors/patrons/`
                 }
             ]
         },
