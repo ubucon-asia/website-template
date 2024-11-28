@@ -57,24 +57,23 @@ export function getStaticPaths() {
 		</div>
 		<div class="col">
 			<div class="p-section--shallow">
-			<h2>Let's meet in the cultural capital of the Nepal!</h2>
+			<h2>{m.travelBanner_title()}</h2>
 			</div>
 			<div class="p-section--shallow">
 			<p>
-				Have you decided to join us for UbuCon Asia 2025 in Kathmandu, Nepal? Start planning your trip today! 
-				Find helpful information below for preparing your travel. 
+				{m.travelBanner_description()}
 			</p>
 			</div>
 			<ul class="p-list--divided">
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/visas-and-other-travel-requirements">Visas and other travel requirements</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/getting-to-the-city">Getting to the city</a></li>
-				<li class="p-list__item is-ticked">Find nearby accommodations</li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/venue-and-safety">Venue & Safety information</a></li>
-				<li class="p-list__item is-ticked"><a href="/venue-and-travel/explore-city">Exploring the city</a></li>
+				<li class="p-list__item is-ticked"><a href="/venue-and-travel/visas-and-other-travel-requirements">{m.travelBanner_listitem1()}</a></li>
+				<li class="p-list__item is-ticked"><a href="/venue-and-travel/getting-to-the-city">{m.travelBanner_listitem2()}</a></li>
+				<li class="p-list__item is-ticked">{m.travelBanner_listitem3()}</li>
+				<li class="p-list__item is-ticked"><a href="/venue-and-travel/venue-and-safety">{m.travelBanner_listitem4()}</a></li>
+				<li class="p-list__item is-ticked"><a href="/venue-and-travel/explore-city">{m.travelBanner_listitem5()}</a></li>
 			</ul>
 			<div class="p-cta-block">
-				<a href="https://matrix.to/#/#ubucon-asia-travel:ubuntu.com" class="p-button">Plan trip with other attendees</a>
-			<a href="mailto:travel@ubucon.asia">Contact travel support team for help ›</a>
+				<a href="https://matrix.to/#/#ubucon-asia-travel:ubuntu.com" class="p-button">{m.travelBanner_button1()}</a>
+			<a href="mailto:travel@ubucon.asia">{m.travelBanner_button2()} ›</a>
 			</div>
 		</div>
 		</div>
