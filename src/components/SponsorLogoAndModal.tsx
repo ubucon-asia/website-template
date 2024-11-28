@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-
+import * as m from "../paraglide/messages.js";
 type SponsorLogoAndModalProps = {
     name: string,
     level: string,
@@ -22,7 +22,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
             <div className="p-modal" id="modal" style={{display: modalOpen && props.showPopup ? "flex" : "none"}}>
             <section className="p-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
                 <header className="p-modal__header">
-                    <h2 className="p-modal__title" id="modal-title">About the sponsor</h2>
+                    <h2 className="p-modal__title" id="modal-title">{m.sponsor_about()}</h2>
                     <button className="p-modal__close" aria-label="Close active modal" aria-controls="modal" onClick={closeHandler}>Close</button>
                 </header>
                 <img src={props.logoImageSrc} alt={props.name} />
@@ -32,7 +32,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
                     {props.description}
                 </p>
                 <footer className="p-modal__footer">
-                <a href={props.url}><button className="p-button--positive u-no-margin--bottom">Visit website</button></a>
+                <a href={props.url}><button className="p-button--positive u-no-margin--bottom">{m.visit_website()}</button></a>
                 </footer>
             </section>
             </div>

@@ -1,5 +1,6 @@
 ---
 import { WebsiteConfig } from "../config";
+import * as m from "../paraglide/messages.js";
 import jsdom from "jsdom";
 const { JSDOM } = jsdom;
 const window = new JSDOM().window;
@@ -25,7 +26,7 @@ blogItemsXml.forEach((el: Element) => {
     <div class="col">
       <a href={WebsiteConfig.blog.viewMoreUrl}>
         <p class="p-muted-heading">
-          Latest from our blog
+          {m.blogBanner_title()}
         </p>
       </a>
     </div>
@@ -50,7 +51,7 @@ blogItemsXml.forEach((el: Element) => {
         
                     <a href={item.link}>
                     <p>
-                        Learn more
+                        {m.blogBanner_learnMore()}
                     </p>
                     </a>
                 </div>
