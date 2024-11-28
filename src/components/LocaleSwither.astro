@@ -25,12 +25,12 @@ import { getRelativeLocaleUrlList } from 'astro:i18n';
   @param {Boolean} show Whether to show or hide the menu.
   @param {Number} top Top offset in pixels where to show the menu.
 */
-function toggleMenu(element, show, top) {
-  var target = document.getElementById(element.getAttribute('aria-controls'));
+function toggleMenu(element: HTMLElement, show: boolean, top?: number) {
+  var target = document.getElementById(element.getAttribute('aria-controls')?? '');
 
   if (target) {
-    element.setAttribute('aria-expanded', show);
-    target.setAttribute('aria-hidden', !show);
+    element.setAttribute('aria-expanded', show.toString());
+    target.setAttribute('aria-hidden', (!show).toString());
 
     if (typeof top !== 'undefined') {
       target.style.top = top + 'px';
@@ -47,11 +47,11 @@ function toggleMenu(element, show, top) {
   @param {HTMLElement} menu The menu container element.
 */
 
-function setupContextualMenu(menu) {
-  const toggle = menu.querySelector('.p-contextual-menu__toggle');
-  const dropdown = menu.querySelector('.p-contextual-menu__dropdown');
+function setupContextualMenu(menu: HTMLElement) {
+  const toggle = menu.querySelector('.p-contextual-menu__toggle') as HTMLElement;
+  const dropdown = menu.querySelector('.p-contextual-menu__dropdown') as HTMLElement;
 
-  toggle.addEventListener('click', function(event) {
+  toggle?.addEventListener('click', function(event) {
     event.preventDefault();
     var menuAlreadyOpen = toggle.getAttribute('aria-expanded') === 'true';
 
@@ -66,8 +66,8 @@ function setupContextualMenu(menu) {
 
   // Add handler for clicking outside the menu.
   document.addEventListener('click', function(event) {
-    var contextualMenu = document.getElementById(toggle.getAttribute('aria-controls'));
-    var clickOutside = !(toggle.contains(event.target) || contextualMenu.contains(event.target));
+    var contextualMenu = document.getElementById(toggle.getAttribute('aria-controls')?? '');
+    var clickOutside = !(toggle.contains(event.target as Node) || contextualMenu?.contains(event.target as Node));
 
     if (clickOutside) {
       toggleMenu(toggle, false);
@@ -77,7 +77,7 @@ function setupContextualMenu(menu) {
   //Add event listener to close menu when tab focus leaves
   dropdown.addEventListener('focusout', function(e) {
     // Check if where you have tabbed to is in the dropdown
-    if (dropdown.contains(e.relatedTarget)) return;
+    if (dropdown.contains(e.relatedTarget as Node)) return;
 
     toggleMenu(toggle, false);
   });
@@ -95,9 +95,9 @@ function setupContextualMenu(menu) {
 /**
   @param {String} contextualMenuSelector The CSS selector matching menu toggle elements.
 */
-function setupAllContextualMenus(contextualMenuSelector) {
+function setupAllContextualMenus(contextualMenuSelector: string) {
   // Setup all contextual menus on the page.
-  var menus = document.querySelectorAll(contextualMenuSelector);
+  var menus = document.querySelectorAll(contextualMenuSelector) as NodeListOf<HTMLElement>;
 
   for (var i = 0, l = menus.length; i < l; i++) {
     setupContextualMenu(menus[i]);
