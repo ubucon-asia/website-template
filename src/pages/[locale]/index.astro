@@ -6,6 +6,7 @@ import Sponsors from '@components/Sponsors.astro';
 import BlogFeed from '@components/BlogFeed.astro';
 import { WebsiteConfig } from '../../config';
 import { getRelativeLocaleUrlList } from 'astro:i18n';
+import * as m from "../../paraglide/messages.js";
 
 export function getStaticPaths() {
 	return getRelativeLocaleUrlList().map((locale) => {
@@ -28,11 +29,9 @@ export function getStaticPaths() {
 				</div>
 		  	<div class="row--50-50">
 				<div class="col">
-					<h2>An event for people with Ubuntu and FOSS in common</h2>
-					<p>UbuCon Asia brings together people with diverse backgrounds across Asia with one thing in common: Ubuntu and FOSS - 
-						to explore what we can do with Ubuntu and FOSS and how we can contribute to its projects and communities.
-						<br/><br/>Not sure if this event is for you? Watch our aftermovie from last year.</a>
-					</p>
+					<h2>{m.videoBanner_title()}</h2>
+					<p>{m.videoBanner_description1()}</p>
+					<p>{m.videoBanner_description2()}</p>
 				</div>
 				<div class="col">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ul8DQh3yroo?si=RQT0Jqq8-bX4yU6-" 
