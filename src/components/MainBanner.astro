@@ -7,9 +7,9 @@ import * as m from "../paraglide/messages.js";
       <div class="col">
         <h1>{WebsiteConfig.siteTitle}</h1>
         <h2>{m.mainBanner_dates()}</h2>
-        <h2>{WebsiteConfig.mainBanner.venue}</h2>
-        <p>{WebsiteConfig.mainBanner.description}</p>
-        <p><small>{WebsiteConfig.mainBanner.footnote}</small></p>
+        <h2>{m.mainBanner_venue()}</h2>
+        <p>{m.mainBanner_description()}</p>
+        <p><small>{WebsiteConfig.mainBanner.showFootnote ? m.mainBanner_footnote :""}</small></p>
         {WebsiteConfig.mainBanner.buttons.map((buttonConfig)=>(
             <a href={buttonConfig.link}>
                 <button class={buttonConfig.class}>

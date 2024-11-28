@@ -1,5 +1,4 @@
-import { getRelativeLocaleUrl } from 'astro:i18n';
-import { languageTag } from "./paraglide/runtime";
+
 
 import UCALogo from './assets/logo.svg'
 import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
@@ -121,11 +120,7 @@ export const WebsiteConfig = {
         ]
     },
     mainBanner: {
-        venue: "St. Xavier’s College, Kathmandu, Nepal*",
-        description: "UbuCon Asia is a community-organized conference connecting Ubuntu community in Asia. \
-            Join us in Kathmandu for two days memorable of conference that connects \
-            enthusiast, engineers, creators, researchers, entrepreneurs and contributors across Asia.",
-        footnote: "*To be confirmed",
+        showFootnote: true,
         buttons: [
             {
                 label: "Become a sponsor!",

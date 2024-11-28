@@ -1,4 +1,7 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
-    "mainBanner_dates": "August 30-31*"
+    "mainBanner_dates": "August 30-31*",
+    "mainBanner_venue": "St. Xavier's College, Kathmandu, Nepal",
+    "mainBanner_description": "UbuCon Asia is a community-organized conference connecting Ubuntu community in Asia. Join us in Kathmandu for two days memorable of conference that connects enthusiast, engineers, creators, researchers, entrepreneurs and contributors across Asia.",
+    "mainBanner_footnote": "*To be confirmed"
 }
