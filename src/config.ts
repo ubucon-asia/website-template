@@ -1,5 +1,6 @@
 
 
+import * as m from "./paraglide/messages.js";
 import UCALogo from './assets/logo.svg'
 import PashupatinathTempleImage from '@assets/pashupatinath_temple.jpg'
 import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
@@ -16,86 +17,86 @@ export const WebsiteConfig = {
     faviconPath: UCALogo.src,
     navigation: (locale: string) => [
         {
-            label: "About",
+            label: m.nav_about(),
             link: `/${locale}/about`,
             childs: []
         },
         {
-            label: "Venue & Travel",
+            label: m.nav_venue_travel(),
             link: "#",
             childs: [
                 {
-                    label: "Venue & Safety",
+                    label: m.nav_venue_safety(),
                     link: `/${locale}/venue-and-travel/venue-and-safety`,
                 },
                 {
-                    label: "Visas and other travel requirements",
+                    label: m.nav_venue_visas(),
                     link: `/${locale}/venue-and-travel/visas-and-other-travel-requirements`,
                 },
                 {
-                    label: "Accommodations",
+                    label: m.nav_venue_accommodations(),
                     link: `/${locale}/venue-and-travel/accommodations`,
                 },
                 {
-                    label: "Getting to the city",
+                    label: m.nav_venue_city(),
                     link: `/${locale}/venue-and-travel/getting-to-the-city`,
                 },
                 {
-                    label: "Exploring the city",
+                    label: m.nav_venue_explore(),
                     link: `/${locale}/venue-and-travel/explore-city`,
                 },
                 {
-                    label: "Travel grant",
+                    label: m.nav_venue_grant(),
                     link: `/${locale}/venue-and-travel/travel-grant`,
                 }
             ]
         },
         {
-            label: "Programs",
+            label: m.nav_programs(),
             link: "#",
             childs: [
                 {
-                    label: "Timetable",
+                    label: m.nav_programs_timetable(),
                     link: "https://events.canonical.com/event/125/timetable/"
                 },
                 {
-                    label: "Social events",
+                    label: m.nav_programs_social(),
                     link: `/${locale}/programs/social-events/`
                 }
             ]
         },
         {
-            label: "Sponsors/Patrons",
+            label: m.nav_sponsors(),
             link: "#",
             childs: [
                 {
-                    label: "Become a sponsor",
+                    label: m.nav_sponsors_become(),
                     link: `/${locale}/sponsors/become-a-sponsor/`
                 },
                 {
-                    label: "Our sponsors",
+                    label: m.nav_sponsors_our(),
                     link: `/${locale}/sponsors/our-sponsors/`
                 },
                 {
-                    label: "Patrons",
+                    label: m.nav_sponsors_patrons(),
                     link: `/${locale}/sponsors/patrons/`
                 }
             ]
         },
         {
-            label: "Links",
+            label: m.nav_links(),
             link: "#",
             childs: [
                 {
-                    label: "News",
+                    label: m.nav_links_news(),
                     link: "https://blog.ubucon.asia/",
                 },
                 {
-                    label: "Docs",
+                    label: m.nav_links_docs(),
                     link: "https://docs.ubucon.asia",
                 },
                 {
-                    label: "Chat",
+                    label: m.nav_links_chat(),
                     link: "https://docs.ubucon.asia/chat",
                 }
             ]
