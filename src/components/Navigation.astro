@@ -1,4 +1,5 @@
 ---
+import { getRelativeLocaleUrlList } from 'astro:i18n';
 import { WebsiteConfig } from "../config";
 import type { SubMenuItem } from "../config";
 ---
@@ -56,11 +57,11 @@ import type { SubMenuItem } from "../config";
             <ul class="p-navigation__items">
                 {WebsiteConfig.subNavigation.map((navItem, index) => (
                     navItem.childs.length <= 0 ? (
-                        <li class="p-navigation__item">
+                        <li class="p-navigation__item is-right-shifted" role="menuitem">
                             <a class="p-navigation__link" href={navItem.link}>{navItem.label}</a>
                         </li>
                     ) : (
-                        <li class="p-navigation__item--dropdown-toggle" id={`rlink-${index}`}>
+                        <li class="p-navigation__item--dropdown-toggle is-right-shifted" id={`rlink-${index}`} role="menuitem">
                             <a href={`#rlink-${index}-menu`}
                                 aria-controls={`rlink-${index}-menu`}
                                 class="p-navigation__link">{navItem.label}</a>
